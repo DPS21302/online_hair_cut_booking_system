@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bookbarber</title>
+
+  <style>
+
+    body,
+    html {
+      height: 100%;
+    }
+
+    * {
+      box-sizing: border-box;
+      box-direction: normal;
+    }
+
+    .bg-img {
+      
+      /* The image used */
+     
+   
+
+      /* Control the height of the image */
+      min-height: 380px;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position:relative;
+      
+    }
+
+    /* Add styles to the form container */
+    .container {
+      
+      color: white;
+      right: 200px;
+      margin: auto;
+      max-width: 300px;
+      padding: 10px;
+      text-align: center;
+      shape-outside: margin-box;
+
+
+    }
+
+    /* Full-width input fields */
+    input[type=text],
+    input[type=password] {
+      width: 100%;
+      color: white;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: rgb(225, 225, 232);
+    }
+
+    input[type=text]:focus,
+    input[type=password]:focus {
+      background-color: rgb(4, 4, 4);
+      outline: 2px gold;
+    }
+
+    /* Set a style for the submit button */
+    .btn {
+      text-align: center;
+      background-color: #04AA6D;
+      color: rgb(0, 0, 0);
+      padding: 16px 20px;
+      border: 22px gold;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+
+
+    }
+
+    
+
+
+    .btn:hover {
+      opacity: 1;
+    }
+  </style>
+
+  <style>
+    body {
+      background-image: url("login.jpg");
+      background-size: 1280px;
+
+    }
+
+
+    #heading {
+      font-size: 50px;
+      color: gold;
+    }
+
+  
+
+    
+  </style>
+</head>
+
+<body>
+  <p style="text-align:center ;" id="heading">BOOKBARBER.COM</p>
+  
+  <div class="bg-img">
+    <form action="/action_page.php" class="container">
+      <h1>Login</h1>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit" class="btn">  <a href="search.html"> Login</a></button>
+      <hr>
+      <button type="submit" class="btn">Sing in</button>
+      
+     
+    </div>
+    </form>
+
+    
+
+
+
+
+</body>
+
+</html>

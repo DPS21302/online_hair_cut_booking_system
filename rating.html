@@ -1,0 +1,96 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Star rating using pure CSS</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+    }
+    body{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(45deg, purple,blue);
+    }
+    .star{
+      font-size: 3rem;
+      color: orange;
+      background-color: unset;
+      border: none;
+     }
+     .rate{
+      user-select: none;
+      background-color: white;
+      padding: 1.4rem 2.5rem;
+      margin: 2rem;
+      border-radius: 0.4rem;
+      text-align: center;
+     }
+    .star:hover{
+        cursor: pointer;
+    }
+    .rating_heading{
+      color: white;
+      animation: scale-up 1s ease;
+    }
+    @keyframes scale-up{
+      0%{
+        opacity: 0;
+        transform: scale(.5);
+      }
+      100%{
+      opacity: 1;
+        transform: scale(1);
+    }}
+</style>
+</head>
+
+<body>
+  <h1 class="rating_heading">5 star rating</h1>
+   <div class="rate">
+    <p>
+      how was the experience
+    </p>
+    <button class="star">&#9734;</button>
+    <button class="star">&#9734;</button>
+    <button class="star">&#9734;</button>
+    <button class="star">&#9734;</button>
+    <button class="star">&#9734;</button>
+   <br><br>
+    
+    <a style="color: rgb(0, 0, 0); font-size: 20px;" href="first.html" target="_blank">Submit</a>
+    <a style="color: rgb(0, 0, 0); font-size: 20px;" href="second.html" target="_blank">Submit</a>
+    <a style="color: rgb(0, 0, 0); font-size: 20px;" href="third.html" target="_blank">Submit</a>
+    <a style="color: rgb(0, 0, 0); font-size: 20px;" href="fourth.html" target="_blank">Submit</a>
+  </div>
+  <script>
+    const allstars = document.querySelectorAll('.star')
+    
+    allstars.forEach((star, i)=>{
+      star.onclick = function(){
+       let current_star_level =i+1;
+
+       allstars.forEach((star,j) => {
+        if(current_star_level >= j+1)
+       {
+        star.innerHTML= '&#9733';
+       }else{
+        star.innerHTML='&#9734';
+       }
+       })
+      }
+    })
+
+
+  </script>
+</body>
+
+</html>
